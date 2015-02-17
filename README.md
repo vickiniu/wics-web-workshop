@@ -8,6 +8,11 @@ Welcome to the WiCS Web Application workshop! We'll be going through basic HTML,
 4.  Add a function that pops up the appropriate alert depending on whether the player has lost or won or if the game was a tie.  Call the function in the .check function.
 5.  Write a function called .clearBoard that sets all of the board's cells to empty.  Call the function at the end of the game.
 6.  Create a button that allows you to restart the game and calles .clearBoard.
+Useful JQuery functions:
+  - $ → gets an element by the appropriate selector (# for IDs or . for classes)
+  - .html → changes the inner HTML of an object
+	- console.log(message) → brings up a message in the console
+	- .click(function(){...}); → handles click on object by calling the passed in function
   
 # Uploading your code to Stanford AFS
 1.  Go to afs.stanford.edu.
