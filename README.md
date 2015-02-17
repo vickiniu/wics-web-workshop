@@ -18,9 +18,9 @@ Welcome to the WiCS Web Application workshop! We'll be going through basic HTML,
 6.  Your webpage will be found at stanford.edu/~SUNetID/filename, where SUNetID is your ID, and filename is the name of the file you want to view.
 
 # Other Resources
-Empty website template: https://html5boilerplate.com
-CSS functionality: http://getbootstrap.com
-More on JavaScript/JQuery:
+- Empty website template: https://html5boilerplate.com
+- CSS functionality: http://getbootstrap.com
+- More on JavaScript/JQuery:
   http://www.w3schools.com/js/js_intro.asp
   http://jquery.com
-  CS 42: http://callbackjs.me
+- CS 42: http://callbackjs.me
