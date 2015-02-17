@@ -1,5 +1,5 @@
 # Web Applications Workshop
-Welcome to the WiCS Web Application workshop! We'll be going through basic HTML, CSS, and Javascript so that you'll be able to to code your own working Tic Tac Toe web app.
+Welcome to the WiCS Web Applications workshop! We'll be going through basic HTML, CSS, and Javascript so that you'll be able to to code your own working Tic Tac Toe web app.
 
 # Adding functionality to tic-tac-toe.js
 1.  Download the starter files using the links to the right.
