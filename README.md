@@ -21,6 +21,6 @@ Welcome to the WiCS Web Application workshop! We'll be going through basic HTML,
 - Empty website template: https://html5boilerplate.com
 - CSS functionality: http://getbootstrap.com
 - More on JavaScript/JQuery:
-  http://www.w3schools.com/js/js_intro.asp
-  http://jquery.com
+  - http://www.w3schools.com/js/js_intro.asp
+  - http://jquery.com
 - CS 42: http://callbackjs.me
