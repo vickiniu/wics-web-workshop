@@ -1,0 +1,43 @@
+body, html {
+	width:100%;
+	font-family: sans-serif;
+}
+
+.container {
+	width:450px;
+	margin:auto;
+}
+
+table {
+	/* set size of font in table! */
+	font-size: 40px;
+}
+
+/* defining a single cell */
+td {
+	/* set bg color and brightness of cell */
+	background-color: #428bca;
+	opacity: 0.5;
+	
+	/* font color */
+	color:#fff;
+
+	/* set size of cell */
+	width: 100px;
+	height: 100px;
+
+	/* center X's and O's in cell */
+	vertical-align: center;
+	text-align: center;
+}
+
+/* change cell when mouse hovers over it */
+td:hover {
+	opacity: 0.6; /* make cell darker */
+	cursor: pointer; /* mouse changes to pointer */
+}
+
+.status {
+	font-size:30px;
+	color:#666;
+}
