@@ -12,14 +12,10 @@ function Board(name) {
 }
 
 /* Function: start
- * Initializes the boardModel + click handling
+ * Initializes click handling
  */
 Board.prototype.start = function() {
 	var obj = this;
-	/* set up callbacks! */
-	$('#' + this.name + ' tr td').click(function() {
-		obj.handleClick(this);
-	});
 };
 
 /* things that should happen each time a cell is clicked.
@@ -27,17 +23,6 @@ Board.prototype.start = function() {
  */
 Board.prototype.handleClick = function(obj) {
 	$obj = $(obj); 	/* this converts obj to a jquery object */
-	if($obj.html() == "") {
-		/* sets the cell to the current player (X or O) */
-		$obj.html(this.turn());
-
-		/* update round count and status */
-		this.roundCount++;
-		this.updateStatus("It's now " + this.turn() + "'s turn!");
-
-		/* check for win condition */
-		this.check();
-	}
 };
 
 /* Who's turn is it?
@@ -51,25 +36,24 @@ Board.prototype.turn = function() {
  * to msg
  */
 Board.prototype.updateStatus = function(msg) {
-	$(".status").html(msg);
 };
+
 
 /* Loads board state from html, then checks for endgame condition.
  * If someone has won, then clear the board and return.
  */
-Board.prototype.check = function() {
-	if(this.roundCount < 3) return;
-	if(this.roundCount == 9) {
-		this.signalDraw();
-		return;
-	}
-
-	/* Load board state into "cells" */
+Board.prototype.checkForEnd = function() {
 	var cells = [[,,],[,,],[,,]]; /* 3x3 grid */
-	$.each($('#' + this.name + ' tr td'), function(index, node) {
-		cells[Math.floor(index/3)][index%3] = $(node).html();
-	});
+	
+	/* TODO: Load board state into "cells" */
 
+	this.checkForWin(cells);
+};
+
+/* cells: 3x3 grid of "X", "", or "O"
+ * If someone won, then clear the board and return.
+ */
+Board.prototype.checkForWin = function(cells) {
 	/* win checks... dumb indexing stuff */
 	for( var i = 0; i < 3; i++ ) {
 		// checking columns
@@ -95,20 +79,15 @@ Board.prototype.check = function() {
  * 	winner : string - either 'X' or 'O'
  */
 Board.prototype.signalWinner = function(winner) {
-	this.updateStatus("Player " + winner + " has won!");
-	this.clearBoard();
 };
 
 /* Informs user of draw and clears the board.
  */
 Board.prototype.signalDraw = function() {
-	this.updateStatus("You two tied!");
-	this.clearBoard();
 };
 
 /* Sets the html of all "td" cells to the empty string ""
+ * and resets roundCount to 0
  */
 Board.prototype.clearBoard = function() {
-	$("#" + this.name + " tr td").html("");
-	this.roundCount = 0;
 };
